@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+void calcularDiferencia(int h1, int m1, int s1, int h2, int m2, int s2) {
+    long totalSeg1 = h1 * 3600 + m1 * 60 + s1;
+    long totalSeg2 = h2 * 3600 + m2 * 60 + s2;
+    long diff = totalSeg2 - totalSeg1;
+
+    int resH = diff / 3600;
+    int resM = (diff % 3600) / 60;
+    int resS = diff % 60;
+    cout << "Tiempo transcurrido: " << resH << ":" << resM << ":" << resS << endl;
+}
+
+int main() {
+    int h1, m1, s1, h2, m2, s2;
+    cout << "Hora 1 (h m s): "; cin >> h1 >> m1 >> s1;
+    cout << "Hora 2 (h m s): "; cin >> h2 >> m2 >> s2;
+    calcularDiferencia(h1, m1, s1, h2, m2, s2);
+    return 0;
+}
