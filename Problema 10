@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+void calcularNota() {
+    double p1, p2, prac, eFinal;
+    int faltas;
+    cout << "Parcial 1 y 2 (0-100): "; cin >> p1 >> p2;
+    cout << "Examen Practico (0-100): "; cin >> prac;
+    cout << "Examen Final (0-100): "; cin >> eFinal;
+    cout << "Numero de faltas: "; cin >> faltas;
+
+    if (faltas > (48 * 0.20)) eFinal = 0;
+
+    double nf = (p1 + p2) / 2 * 0.40 + (prac * 0.20) + (eFinal * 0.40);
+    cout << "Nota Final: " << nf << (nf >= 51 ? " - APROBADO" : " - REPROBADO") << endl;
+}
+
+int main() {
+    char continuar;
+    do {
+        calcularNota();
+        cout << "¿Otro alumno? (s/n): "; cin >> continuar;
+    } while (continuar == 's' || continuar == 'S');
+    return 0;
+}
