@@ -1,0 +1,22 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+    int c1, c2, c3, c4;
+    cout << "Cantidad Hamburguesas: "; cin >> c1;
+    cout << "Cantidad H. con Queso: "; cin >> c2;
+    cout << "Cantidad Papas: "; cin >> c3;
+    cout << "Cantidad Soda: "; cin >> c4;
+
+    double t1 = c1 * 3.0, t2 = c2 * 5.0, t3 = c3 * 2.0, t4 = c4 * 2.5;
+    double total = t1 + t2 + t3 + t4;
+
+    cout << fixed << setprecision(2);
+    cout << "\nHamburguesas (3Bs): " << c1 << " | Total: " << t1 << " Bs." << endl;
+    cout << "H. con Queso (5Bs): " << c2 << " | Total: " << t2 << " Bs." << endl;
+    cout << "Papas fritas (2Bs): " << c3 << " | Total: " << t3 << " Bs." << endl;
+    cout << "Soda (2.5Bs): " << c4 << " | Total: " << t4 << " Bs." << endl;
+    cout << "TOTAL COMPRA: " << total << " Bs." << endl;
+    return 0;
+}
