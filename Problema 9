@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int op;
+    cout << "1. Cuadrado\n2. Circulo\n3. Triangulo\nElija: "; cin >> op;
+    if (op == 1) {
+        double l; cout << "Lado: "; cin >> l; cout << "Area: " << l * l << endl;
+    } else if (op == 2) {
+        double r; cout << "Radio: "; cin >> r; cout << "Area: " << 3.14159 * r * r << endl;
+    } else if (op == 3) {
+        double b, h; cout << "Base y Altura: "; cin >> b >> h; cout << "Area: " << (b * h) / 2 << endl;
+    }
+    return 0;
+}
